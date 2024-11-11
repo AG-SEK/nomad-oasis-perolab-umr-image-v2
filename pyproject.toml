@@ -54,7 +54,7 @@ jupyter = [
   #'ipysheet',
   #'ipydatagrid',
   'jupyter-flex',
-  '#pyvis'
+  #'pyvis'
 ]
 dev = ["nomad-lab[parsing, infrastructure, dev]>=1.3.4"]
 
