@@ -2818,7 +2818,7 @@ requires-dist = [
     { name = "nomad-lab", extras = ["parsing", "infrastructure"], specifier = ">=1.3.4" },
     { name = "nomad-lab", extras = ["parsing", "infrastructure", "dev"], marker = "extra == 'dev'", specifier = ">=1.3.4" },
     { name = "nomad-material-processing", marker = "extra == 'plugins'" },
-    { name = "nomad-perolab-umr", marker = "extra == 'plugins'", git = "https://github.com/AG-SEK/nomad-perolab-umr-plugin.git?rev=6e8927bbfcf27254ed4468d30761115c2dee4327#6e8927bbfcf27254ed4468d30761115c2dee4327" },
+    { name = "nomad-perolab-umr", marker = "extra == 'plugins'", git = "https://github.com/AG-SEK/nomad-perolab-umr-plugin.git?rev=960d32502c6ae1118318aa82720ba6fae590f6aa#960d32502c6ae1118318aa82720ba6fae590f6aa" },
     { name = "perovskite-solar-cell-database", marker = "extra == 'plugins'", git = "https://github.com/FAIRmat-NFDI/nomad-perovskite-solar-cells-database.git?rev=b29cbbd808a6c9c0c45cdd10c6e7982375342d9f#b29cbbd808a6c9c0c45cdd10c6e7982375342d9f" },
     { name = "voila", marker = "extra == 'jupyter'" },
 ]
@@ -2835,7 +2835,7 @@ dependencies = [
 
 [[package]]
 name = "nomad-lab"
-version = "1.3.11"
+version = "1.3.12"
 source = { registry = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple" }
 dependencies = [
     { name = "aniso8601" },
@@ -2880,7 +2880,7 @@ dependencies = [
     { name = "wrapt" },
     { name = "xarray" },
 ]
-sdist = { url = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/files/0a9c9a1885105778a01feb0530dc8521d1afeb9b963dc0755ff562ab832f3144/nomad-lab-1.3.11.tar.gz", hash = "sha256:0a9c9a1885105778a01feb0530dc8521d1afeb9b963dc0755ff562ab832f3144" }
+sdist = { url = "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/files/351ef3759deef9d0ff899921e8e7abe4731cd16124606dfd37df493bf396d445/nomad-lab-1.3.12.tar.gz", hash = "sha256:351ef3759deef9d0ff899921e8e7abe4731cd16124606dfd37df493bf396d445" }
 
 [package.optional-dependencies]
 dev = [
@@ -2985,7 +2985,7 @@ wheels = [
 [[package]]
 name = "nomad-perolab-umr"
 version = "0.1.0"
-source = { git = "https://github.com/AG-SEK/nomad-perolab-umr-plugin.git?rev=6e8927bbfcf27254ed4468d30761115c2dee4327#6e8927bbfcf27254ed4468d30761115c2dee4327" }
+source = { git = "https://github.com/AG-SEK/nomad-perolab-umr-plugin.git?rev=960d32502c6ae1118318aa82720ba6fae590f6aa#960d32502c6ae1118318aa82720ba6fae590f6aa" }
 dependencies = [
     { name = "fpdf" },
     { name = "nomad-lab" },
