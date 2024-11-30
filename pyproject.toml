@@ -41,7 +41,7 @@ plugins = [
   #"nomad-parser-plugins-database>=1.0",
   "nomad-material-processing",
   #"nomad-synthesis @ git+https://github.com/FAIRmat-NFDI/AreaA-data_modeling_and_schemas.git", Error!
-  "nomad-baseclasses @ git+https://github.com/nomad-hzb/nomad-baseclasses.git",
+  "nomad-baseclasses @ git+https://github.com/nomad-hzb/nomad-baseclasses.git@870a3765788abb5eaf4751628c80efd5c67e57b5",
   "nomad-perolab-umr @ git+https://github.com/AG-SEK/nomad-perolab-umr-plugin.git@90cd714e6357e2bbeb044adf1763eef2ea470f7e",
   "nomad-hysprint @ git+https://github.com/nomad-hzb/nomad-hysprint.git",
   #'hzb-combinatorial-libraries @ git+https://github.com/nomad-hzb/hzb-combinatorial-libraries-plugin.git',
@@ -50,6 +50,7 @@ plugins = [
 ]
 jupyter = [
   'voila',
+  'fpdf',
   #'ipyaggrid',
   #'ipysheet',
   #'ipydatagrid',
