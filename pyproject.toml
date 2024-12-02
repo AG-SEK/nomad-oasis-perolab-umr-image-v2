@@ -50,7 +50,7 @@ plugins = [
 ]
 jupyter = [
   'voila',
-  #'fpdf',
+  'fpdf',
   #'ipyaggrid',
   #'ipysheet',
   #'ipydatagrid',
