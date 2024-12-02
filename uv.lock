@@ -2773,7 +2773,7 @@ wheels = [
 [[package]]
 name = "nomad-baseclasses"
 version = "1.0.0"
-source = { git = "https://github.com/nomad-hzb/nomad-baseclasses.git" }
+source = { git = "https://github.com/nomad-hzb/nomad-baseclasses.git#8651adf218892661483f0f868ec3c591c4f4e142" }
 dependencies = [
     { name = "chardet" },
     { name = "hdf5plugin" },
@@ -2813,7 +2813,7 @@ plugins = [
 [package.metadata]
 requires-dist = [
     { name = "jupyter-flex", marker = "extra == 'jupyter'" },
-    { name = "nomad-baseclasses", marker = "extra == 'plugins'", git = "https://github.com/nomad-hzb/nomad-baseclasses.git?rev=cebb22ebc76be828e54d924d7c0098c472f075a9#cebb22ebc76be828e54d924d7c0098c472f075a9" },
+    { name = "nomad-baseclasses", marker = "extra == 'plugins'", git = "https://github.com/nomad-hzb/nomad-baseclasses.git?rev=8651adf218892661483f0f868ec3c591c4f4e142#8651adf218892661483f0f868ec3c591c4f4e142" },
     { name = "nomad-hysprint", marker = "extra == 'plugins'", git = "https://github.com/nomad-hzb/nomad-hysprint.git" },
     { name = "nomad-lab", extras = ["parsing", "infrastructure"], specifier = ">=1.3.4" },
     { name = "nomad-lab", extras = ["parsing", "infrastructure", "dev"], marker = "extra == 'dev'", specifier = ">=1.3.11" },
