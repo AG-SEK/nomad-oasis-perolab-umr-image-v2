@@ -2799,6 +2799,7 @@ dev = [
     { name = "nomad-lab", extra = ["dev", "infrastructure", "parsing"] },
 ]
 jupyter = [
+    { name = "fpdf" },
     { name = "jupyter-flex" },
     { name = "voila" },
 ]
@@ -2812,6 +2813,7 @@ plugins = [
 
 [package.metadata]
 requires-dist = [
+    { name = "fpdf", marker = "extra == 'jupyter'" },
     { name = "jupyter-flex", marker = "extra == 'jupyter'" },
     { name = "nomad-baseclasses", marker = "extra == 'plugins'", git = "https://github.com/nomad-hzb/nomad-baseclasses.git" },
     { name = "nomad-hysprint", marker = "extra == 'plugins'", git = "https://github.com/nomad-hzb/nomad-hysprint.git" },
