@@ -49,7 +49,7 @@ plugins = [
   "nomad-material-processing",
   #"nomad-synthesis @ git+https://github.com/FAIRmat-NFDI/AreaA-data_modeling_and_schemas.git", Error!
   "nomad-baseclasses @ git+https://github.com/nomad-hzb/nomad-baseclasses.git@bd23d2e7072aa1704b48b647eb4b9c496b5e05ca",
-  "nomad-perolab-umr @ git+https://github.com/AG-SEK/nomad-perolab-umr-plugin.git@14e376007aaad8a56254a1aa52c2f92b8bbd6ab4",
+  "nomad-perolab-umr @ git+https://github.com/AG-SEK/nomad-perolab-umr-plugin.git@11a28521744b64aa52b57b7d6260e4a4aeb8c54c",
   "nomad-hysprint @ git+https://github.com/nomad-hzb/nomad-hysprint.git",
   #'hzb-combinatorial-libraries @ git+https://github.com/nomad-hzb/hzb-combinatorial-libraries-plugin.git',
   #'nomad-chemical-energy @ git+https://github.com/nomad-hzb/nomad-chemical-energy.git',
