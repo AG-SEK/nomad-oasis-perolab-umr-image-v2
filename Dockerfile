@@ -136,7 +136,7 @@ EXPOSE 9000
 VOLUME /app/.volumes/fs
 
 
-FROM quay.io/jupyter/datascience-notebook:2025-04-04 AS jupyter
+FROM quay.io/jupyter/base-notebook:${JUPYTER_VERSION} AS jupyter_builder
 
 ENV UV_PROJECT_ENVIRONMENT=/opt/conda \
     UV_FROZEN=1
