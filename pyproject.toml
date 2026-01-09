@@ -50,7 +50,7 @@ plugins = [
   #"nomad-synthesis @ git+https://github.com/FAIRmat-NFDI/AreaA-data_modeling_and_schemas.git", Error!
   "nomad-baseclasses @ git+https://github.com/nomad-hzb/nomad-baseclasses.git@f7343aa18d69feab9ca9e95ff0d45ddc3428a7a3", #Dec 15, 2025
   "nomad-perolab-umr @ git+https://github.com/AG-SEK/nomad-perolab-umr-plugin.git@5cc26dc3071477b7e1499514bea7e41fd5061112", #Jan 9, 2026
-  "nomad-hysprint @ git+https://github.com/nomad-hzb/nomad-hysprint.git",
+  #"nomad-hysprint @ git+https://github.com/nomad-hzb/nomad-hysprint.git",
   "Solar @ git+https://gitlab.uni-marburg.de/fb13/ag-goldschmidt/solar-repository.git@06bf5afcf694e2dbe97a614e36f4fd3684b99465", # Jan 8, 2026
   "nomad-luqy-plugin @ git+https://github.com/Pepe-Marquez/nomad-luqy-plugin.git@fcbee16c352d367512cb5312c66b34e3f5d21ac3", # jul 8, 2025
   #'hzb-combinatorial-libraries @ git+https://github.com/nomad-hzb/hzb-combinatorial-libraries-plugin.git',
