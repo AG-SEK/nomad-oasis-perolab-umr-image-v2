@@ -10,29 +10,33 @@ classifiers = [
   "Intended Audience :: Developers",
   "Operating System :: OS Independent",
   "Programming Language :: Python",
-  "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
 ]
 name = "nomad-distribution"
 description = "nomad distribution template"
 dynamic = ["version"]
 readme = "README.md"
-requires-python = ">=3.10, <3.13"
+requires-python = ">=3.10"
 license = { file = "LICENSE" }
 dependencies = [
-  "nomad-lab[parsing, infrastructure]==1.4.0", 
+  "nomad-lab[parsing, infrastructure]>=1.4.0",
+  "setuptools",
   "natsort",
-  "fpdf",
+  "fpdf"
   ]
+
+
+[project.urls]
+repository = "https://github.com/FAIRmat-NFDI/nomad-distro-template"
 
 [project.optional-dependencies]
 plugins = [
-  "perovskite-solar-cell-database @ git+https://github.com/FAIRmat-NFDI/nomad-perovskite-solar-cells-database.git@v1.0.1",
+  "perovskite-solar-cell-database @ git+https://github.com/FAIRmat-NFDI/nomad-perovskite-solar-cells-database.git@v0.1.1",
   #"nomad-porous-materials @ git+https://github.com/FAIRmat-NFDI/nomad-porous-materials.git@522f4a3208077f534f1c5e886527ee2104283d0b",
   #"nomad-aitoolkit @ git+https://github.com/FAIRmat-NFDI/nomad-aitoolkit.git@b203f8eb28dc4b6771a39d5c5b7ad3d9d8583ac8",
-  #"nomad-simulations==0.0.1",
-  #"pynxtools[convert]==0.5.0",
+  #"nomad-simulations==0.5.0",
   #"nomad-schema-plugin-run>=1.0.1",
   #"nomad-schema-plugin-simulation-workflow>=1.0.1",
   #"nomad-normalizer-plugin-bandstructure>=1.0",
@@ -58,6 +62,7 @@ plugins = [
   #"nomad-pvcomb @ git+https://codebase.helmholtz.cloud/pvcomb/nomad-pvcomb.git@develop"
 ]
 jupyter = [
+  "jupyter-events",
   'voila',
   'fpdf',
   #'ipyaggrid',
@@ -66,14 +71,16 @@ jupyter = [
   'jupyter-flex',
   #'pyvis'
 ]
+
 dev = ["nomad-lab[parsing, infrastructure, dev]>=1.4.0"]
+gpu-action = []
+cpu-action = []
 
 [tool.uv]
 extra-index-url = [
   "https://gitlab.mpcdf.mpg.de/api/v4/projects/2187/packages/pypi/simple",
 ]
-constraint-dependencies = ["hyperspy>=1.7.6"]
-prerelease = "disallow"
+prerelease = "explicit"
 
 [tool.setuptools.packages.find]
 exclude = ["gui*", "docs*", "config*"]

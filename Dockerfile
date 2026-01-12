@@ -108,23 +108,41 @@ RUN --mount=type=cache,target=/root/.cache/uv \
     uv run --with nomad-docs --directory docs mkdocs build \
     && mkdir -p built_docs \
     && cp -r docs/site/* built_docs
-    
+
+FROM builder AS gpu_action_builder
+
+WORKDIR /app
+
+RUN --mount=type=cache,target=/root/.cache/uv \
+    --mount=type=bind,source=uv.lock,target=uv.lock \
+    --mount=type=bind,source=pyproject.toml,target=pyproject.toml \
+    uv sync --extra plugins --extra gpu-action
+
+FROM builder AS cpu_action_builder
+
+WORKDIR /app
+
+RUN --mount=type=cache,target=/root/.cache/uv \
+    --mount=type=bind,source=uv.lock,target=uv.lock \
+    --mount=type=bind,source=pyproject.toml,target=pyproject.toml \
+    uv sync --extra plugins --extra cpu-action
+
 FROM base_final AS final
 
 ARG PYTHON_VERSION=3.12
 
-COPY --chown=nomad:1000 --from=builder /opt/venv /opt/venv
-COPY --chown=nomad:1000 scripts/run.sh .
-COPY --chown=nomad:1000 scripts/run-worker.sh .
+COPY --chown=nomad:${UID} --from=builder /opt/venv /opt/venv
+COPY --chown=nomad:${UID} scripts/run.sh .
+COPY --chown=nomad:${UID} scripts/run-worker.sh .
 COPY configs/nomad.yaml nomad.yaml
 COPY pyproject.toml uv.lock /opt/
 COPY --chown=nomad:${UID} --from=docs /app/built_docs /opt/venv/lib/python${PYTHON_VERSION}/site-packages/nomad/app/static/docs
 
 RUN mkdir -p /app/.volumes/fs \
- && chown -R nomad:1000 /app \
- && chown -R nomad:1000 /opt/venv \
+ && chown -R nomad:${UID} /app \
+ && chown -R nomad:${UID} /opt/venv \
  && mkdir nomad \
- && cp /opt/venv/lib/python3.12/site-packages/nomad/jupyterhub_config.py nomad/
+ && cp /opt/venv/lib/python${PYTHON_VERSION}/site-packages/nomad/jupyterhub_config.py nomad/
 
 
 USER nomad
@@ -135,12 +153,20 @@ EXPOSE 9000
 
 VOLUME /app/.volumes/fs
 
+FROM final AS cpu_action_final
+
+COPY --chown=nomad:${UID} --from=cpu_action_builder /opt/venv /opt/venv
+
+FROM final AS gpu_action_final
+
+COPY --chown=nomad:${UID} --from=gpu_action_builder /opt/venv /opt/venv
+
 
 FROM quay.io/jupyter/base-notebook:${JUPYTER_VERSION} AS jupyter_builder
 
 ENV UV_PROJECT_ENVIRONMENT=/opt/conda \
     UV_FROZEN=1
-    
+
 # Fix: https://github.com/hadolint/hadolint/wiki/DL4006
 # Fix: https://github.com/koalaman/shellcheck/wiki/SC3014
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
