@@ -3260,7 +3260,7 @@ requires-dist = [
     { name = "nomad-lab", extras = ["infrastructure", "parsing"], specifier = ">=1.4.0" },
     { name = "nomad-luqy-plugin", marker = "extra == 'plugins'", git = "https://github.com/Pepe-Marquez/nomad-luqy-plugin.git?rev=fcbee16c352d367512cb5312c66b34e3f5d21ac3" },
     { name = "nomad-material-processing", marker = "extra == 'plugins'" },
-    { name = "nomad-perolab-umr", marker = "extra == 'plugins'", git = "https://github.com/AG-SEK/nomad-perolab-umr-plugin.git?rev=5cc26dc3071477b7e1499514bea7e41fd5061112" },
+    { name = "nomad-perolab-umr", marker = "extra == 'plugins'", git = "https://github.com/AG-SEK/nomad-perolab-umr-plugin.git?rev=cf98a711bc65da7a4ad71a71f53a7055d78a1bea" },
     { name = "perovskite-solar-cell-database", marker = "extra == 'plugins'", git = "https://github.com/FAIRmat-NFDI/nomad-perovskite-solar-cells-database.git?rev=v0.1.1" },
     { name = "setuptools" },
     { name = "solar", marker = "extra == 'plugins'", git = "https://gitlab.uni-marburg.de/fb13/ag-goldschmidt/solar-repository.git?rev=06bf5afcf694e2dbe97a614e36f4fd3684b99465" },
@@ -3395,7 +3395,7 @@ wheels = [
 [[package]]
 name = "nomad-perolab-umr"
 version = "0.1.0"
-source = { git = "https://github.com/AG-SEK/nomad-perolab-umr-plugin.git?rev=5cc26dc3071477b7e1499514bea7e41fd5061112#5cc26dc3071477b7e1499514bea7e41fd5061112" }
+source = { git = "https://github.com/AG-SEK/nomad-perolab-umr-plugin.git?rev=cf98a711bc65da7a4ad71a71f53a7055d78a1bea#cf98a711bc65da7a4ad71a71f53a7055d78a1bea" }
 dependencies = [
     { name = "fpdf" },
     { name = "nomad-lab" },
