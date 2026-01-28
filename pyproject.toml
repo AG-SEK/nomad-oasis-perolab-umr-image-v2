@@ -33,7 +33,8 @@ repository = "https://github.com/ag-sek/nomad-oasis-perolab-umr-image-v2"
 
 [project.optional-dependencies]
 plugins = [
-  "perovskite-solar-cell-database @ git+https://github.com/FAIRmat-NFDI/nomad-perovskite-solar-cells-database.git@v0.1.1",
+  "nomad-perolab-umr @ git+https://github.com/AG-SEK/nomad-perolab-umr-plugin.git@cf98a711bc65da7a4ad71a71f53a7055d78a1bea", #CAHNGE THE COMMIT HASSH HERE
+  "Solar @ git+https://gitlab.uni-marburg.de/fb13/ag-goldschmidt/solar-repository.git@06bf5afcf694e2dbe97a614e36f4fd3684b99465", # Jan 8, 2026
   #"nomad-porous-materials @ git+https://github.com/FAIRmat-NFDI/nomad-porous-materials.git@522f4a3208077f534f1c5e886527ee2104283d0b",
   #"nomad-aitoolkit @ git+https://github.com/FAIRmat-NFDI/nomad-aitoolkit.git@b203f8eb28dc4b6771a39d5c5b7ad3d9d8583ac8",
   #"nomad-simulations==0.5.0",
@@ -50,16 +51,15 @@ plugins = [
   #"nomad-parser-plugins-atomistic>=1.0",
   #"nomad-parser-plugins-workflow>=1.0",
   #"nomad-parser-plugins-database>=1.0",
-  "nomad-material-processing",
   #"nomad-synthesis @ git+https://github.com/FAIRmat-NFDI/AreaA-data_modeling_and_schemas.git", Error!
-  "nomad-baseclasses @ git+https://github.com/nomad-hzb/nomad-baseclasses.git@f7343aa18d69feab9ca9e95ff0d45ddc3428a7a3", #Dec 15, 2025
-  "nomad-perolab-umr @ git+https://github.com/AG-SEK/nomad-perolab-umr-plugin.git@5cc26dc3071477b7e1499514bea7e41fd5061112", #Jan 9, 2026
   #"nomad-hysprint @ git+https://github.com/nomad-hzb/nomad-hysprint.git",
-  "Solar @ git+https://gitlab.uni-marburg.de/fb13/ag-goldschmidt/solar-repository.git@06bf5afcf694e2dbe97a614e36f4fd3684b99465", # Jan 8, 2026
-  "nomad-luqy-plugin @ git+https://github.com/Pepe-Marquez/nomad-luqy-plugin.git@fcbee16c352d367512cb5312c66b34e3f5d21ac3", # jul 8, 2025
   #'hzb-combinatorial-libraries @ git+https://github.com/nomad-hzb/hzb-combinatorial-libraries-plugin.git',
   #'nomad-chemical-energy @ git+https://github.com/nomad-hzb/nomad-chemical-energy.git',
-  #"nomad-pvcomb @ git+https://codebase.helmholtz.cloud/pvcomb/nomad-pvcomb.git@develop"
+  #"nomad-pvcomb @ git+https://codebase.helmholtz.cloud/pvcomb/nomad-pvcomb.git@develop",
+  "nomad-baseclasses @ git+https://github.com/nomad-hzb/nomad-baseclasses.git@f7343aa18d69feab9ca9e95ff0d45ddc3428a7a3", #Dec 15, 2025
+  "nomad-material-processing",
+  "nomad-luqy-plugin @ git+https://github.com/Pepe-Marquez/nomad-luqy-plugin.git@fcbee16c352d367512cb5312c66b34e3f5d21ac3", # jul 8, 2025
+  "perovskite-solar-cell-database @ git+https://github.com/FAIRmat-NFDI/nomad-perovskite-solar-cells-database.git@v0.1.1",
 ]
 jupyter = [
   "jupyter-events",
