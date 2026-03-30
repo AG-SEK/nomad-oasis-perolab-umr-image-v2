@@ -33,7 +33,7 @@ repository = "https://github.com/ag-sek/nomad-oasis-perolab-umr-image-v2"
 
 [project.optional-dependencies]
 plugins = [
-  "nomad-perolab-umr @ git+https://github.com/AG-SEK/nomad-perolab-umr-plugin.git@cffe85f3ce61d9fc0d55b8dfed059dbdeed23389", #CAHNGE THE COMMIT HASSH HERE
+  "nomad-perolab-umr @ git+https://github.com/AG-SEK/nomad-perolab-umr-plugin.git@9ff74fe7c503022a332284d2551fa3c6eca5975e", #CAHNGE THE COMMIT HASSH HERE
   "Solar @ git+https://gitlab.uni-marburg.de/fb13/ag-goldschmidt/solar-repository.git@06bf5afcf694e2dbe97a614e36f4fd3684b99465", # Jan 8, 2026
   #"nomad-porous-materials @ git+https://github.com/FAIRmat-NFDI/nomad-porous-materials.git@522f4a3208077f534f1c5e886527ee2104283d0b",
   #"nomad-aitoolkit @ git+https://github.com/FAIRmat-NFDI/nomad-aitoolkit.git@b203f8eb28dc4b6771a39d5c5b7ad3d9d8583ac8",
